@@ -12,6 +12,7 @@ def game_hash
       "Alan Anderson"=>{
         number:0,
         shoe:16,
+        shoes:16,
         points:22,
         rebounds:12,
         assists:12,
@@ -22,6 +23,7 @@ def game_hash
       "Reggie Evans"=>{
         number:30,
         shoe:14,
+        shoes:14,
         points:12,
         rebounds:12,
         assists:12,
@@ -32,6 +34,7 @@ def game_hash
         "Brook Lopez"=>{
         number:11,
         shoe:17,
+        shoes:17,
         points:17,
         rebounds:19,
         assists:10,
@@ -42,6 +45,7 @@ def game_hash
         "Mason Plumlee"=>{
         number:1,
         shoe:19,
+        shoes:19,
         points:26,
         rebounds:12,
         assists:6,
@@ -52,6 +56,7 @@ def game_hash
         "Jason Terry"=>{
         number:31,
         shoe:15,
+        shoes:15,
         points:19,
         rebounds:2,
         assists:2,
@@ -69,6 +74,7 @@ def game_hash
       "Jeff Adrien"=>{
         number:4,
         shoe:18,
+        shoes:18,
         points:10,
         rebounds:1,
         assists:1,
@@ -79,6 +85,7 @@ def game_hash
       "Bismak Biyombo"=>{
         number:0,
         shoe:16,
+        shoes:16,
         points:12,
         rebounds:4,
         assists:7,
@@ -89,6 +96,7 @@ def game_hash
         "DeSagna Diop"=>{
         number:2,
         shoe:14,
+        shoes:14,
         points:24,
         rebounds:12,
         assists:12,
@@ -98,7 +106,7 @@ def game_hash
       },
         "Ben Gordon"=>{
         number:8,
-        shoe:15,
+        shoe:15,,
         points:33,
         rebounds:3,
         assists:2,
@@ -109,6 +117,9 @@ def game_hash
         "Brendan Haywood"=>{
         number:33,
         shoe:15,
+        slam_dunks:10
+        number:33,
+        shoes:15,
         points:6,
         rebounds:12,
         assists:12,
@@ -120,6 +131,10 @@ def game_hash
   }
   }
 end
+
+
+
+
 
 
 
@@ -137,6 +152,7 @@ def shoe_size(player)
   
   shoe=0
   game_hash.each do |location, team_info|
+    binding.pry
     team_info.each do |attribute, info|
       if info.include?(player)
          return game_hash[location][attribute][player][:shoe]
